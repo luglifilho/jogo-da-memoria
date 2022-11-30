@@ -29,6 +29,8 @@ function checkCards(){
 function disableCards(){
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
+
+    resetboard();
 }
 
 function unflipCard(){
@@ -37,13 +39,28 @@ function unflipCard(){
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
 
-        lockBoard = false;
+        resetboard();
     }, 1500);
 }
 
+function resetboard(){
+    [hasflippedCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [ null, null];
 
+   
+
+}
+
+(function shuffle(){
+    cards.forEach((card) => {
+        let randomPosition = Math.floor(Math.random() *12);
+        card.style.order = randomPosition;
+    })
+})();
 
 cards.forEach((card) => {
     card.addEventListener('click', flipCard)
+
+    
     
 })

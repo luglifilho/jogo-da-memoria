@@ -7,15 +7,27 @@
 body{
     height: 100vh;
     display: flex;
-    background-image: url('./img/banner.jpg');
+    background-image: url('./img/banner.png');
+    flex-direction: column;
+   
 }
 
+.title{
+    margin: auto;
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 100px;
+    
+  
+    color: rgb(25, 61, 129);
+}
 .memory-game{
     height: 640px;
     width: 640px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    
 }
 
 .card{
@@ -23,7 +35,7 @@ body{
     width: calc(25% - 10px);
     margin: 5px;
     position: relative;
-    box-shadow: 1px 1px 1px rgb(54, 189, 189);
+    box-shadow: 1px 1px 1px rgb(54, 189, 189, 0);
     cursor: pointer;
     transform: scale(1);
     transform-style: preserve-3d;
@@ -41,11 +53,11 @@ body{
     height: 100%;
     padding: 20px;
     position: absolute;
-    border-radius: 20px;
-    border-color: black;
-    border-style: solid;
-    background: #ffff ;
+    border-radius: 50px;
+    background: rgba(54, 189, 189, 0) ;
     backface-visibility: hidden;
+    
+    
 }
 
 .card-front{
